@@ -55,11 +55,13 @@
   # Enable Ly display manager
   services.displayManager.ly.enable = true;
   
-  services.xserver.windowManager.berry.enable = true;
+  # services.xserver.windowManager.berry.enable = true;
 
   services.desktopManager.plasma6.enable = true;
-  
-  services.picom.enable = true;
+ 
+  programs.niri.enable = true;
+ 
+  # services.picom.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -69,6 +71,11 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.printing.drivers = with pkgs; [
+    gutenprint
+    hplip
+    hplipWithPlugin
+  ];
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -106,18 +113,25 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Add waybar
+  programs.waybar.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-   sxhkd
+
+   nerd-fonts.agave   
+   brightnessctl
+
    fastfetch
-   librewolf
-   lemonbar
+   vscode
    alacritty
+   localsend
+   tealdeer
    git
    gh
-   rofi
-   nitrogen
+   fuzzel
+   swaybg
+   waypaper
    busybox
    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
