@@ -118,10 +118,17 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+   
+   # for emacs
+   ripgrep
+   emacs
+   fd
+   symbola
 
    nerd-fonts.agave   
    brightnessctl
-
+   
+   vencord
    fastfetch
    vscode
    alacritty
