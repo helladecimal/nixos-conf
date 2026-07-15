@@ -123,12 +123,12 @@
    ripgrep
    emacs
    fd
-   symbola
+   # symbola
 
    nerd-fonts.agave   
    brightnessctl
    
-   vencord
+   vesktop
    fastfetch
    vscode
    alacritty
