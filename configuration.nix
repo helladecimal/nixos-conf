@@ -121,7 +121,7 @@
    
    # for emacs
    ripgrep
-   emacs-pgtk
+   emacs-gtk
    fd
    # symbola
 
