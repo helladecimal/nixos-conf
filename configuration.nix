@@ -20,12 +20,14 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-  
+
   # Garbage collector
   nix.gc = {
       automatic = true;
       options = "--delete-older-than 7d";
   };
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -47,20 +49,20 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  
+
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
   # Enable Ly display manager
   services.displayManager.ly.enable = true;
-  
+
   # services.xserver.windowManager.berry.enable = true;
 
   services.desktopManager.plasma6.enable = true;
- 
+
   programs.niri.enable = true;
- 
+
   # services.picom.enable = true;
 
   # Configure keymap in X11
@@ -113,34 +115,41 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # emacs
+  services.emacs = {
+     enable = true;
+     package = pkgs.emacs-pgtk;
+  };
+
   # Add waybar
   programs.waybar.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-   
-   # for emacs
-   ripgrep
-   emacs-gtk
-   fd
-   # symbola
 
-   nerd-fonts.agave   
-   brightnessctl
-   
-   vesktop
-   fastfetch
-   vscode
-   alacritty
-   localsend
-   tealdeer
-   git
-   gh
-   fuzzel
-   swaybg
-   waypaper
-   busybox
-   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    gcc
+
+    # for emacs
+    ripgrep
+    fd
+    # symbola
+
+    nerd-fonts.agave
+    brightnessctl
+
+    vesktop
+    fastfetch
+    vscode
+    alacritty
+    localsend
+    tealdeer
+    git
+    gh
+    fuzzel
+    swaybg
+    waypaper
+    busybox
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
