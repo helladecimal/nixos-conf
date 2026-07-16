@@ -122,7 +122,6 @@
   };
 
   # Add waybar
-  programs.waybar.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -138,6 +137,7 @@
     brightnessctl
 
     vesktop
+    waybar
     fastfetch
     vscode
     alacritty
