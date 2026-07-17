@@ -161,6 +161,7 @@
     gh
     fuzzel
     swaybg
+    swayidle
     hyprlock
     waypaper
     busybox
