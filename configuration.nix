@@ -61,6 +61,20 @@
 
   services.desktopManager.plasma6.enable = true;
 
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = ["*"];
+        settings = {
+            main = {
+            capslock = "esc";
+            };
+        };
+      };
+    };
+  };
+
   programs.niri.enable = true;
 
   # services.picom.enable = true;
@@ -147,6 +161,7 @@
     gh
     fuzzel
     swaybg
+    swaylock
     waypaper
     busybox
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
