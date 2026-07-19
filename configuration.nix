@@ -116,7 +116,7 @@
   users.users."hecka" = {
     isNormalUser = true;
     description = "hecka";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "syncthing" ];
     packages = with pkgs; [
     #  kdePackages.kate
     #  thunderbird
@@ -133,6 +133,12 @@
   services.emacs = {
      enable = true;
      package = pkgs.emacs-pgtk;
+  };
+
+  services.syncthing = {
+    enable = true;
+
+    openDefaultPorts = true;
   };
 
   # Add waybar
