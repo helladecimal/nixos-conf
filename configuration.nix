@@ -116,7 +116,9 @@
   users.users."hecka" = {
     isNormalUser = true;
     description = "hecka";
-    extraGroups = [ "networkmanager" "wheel" "syncthing" ];
+    extraGroups = [ "networkmanager" "wheel" ];
+
+
     packages = with pkgs; [
     #  kdePackages.kate
     #  thunderbird
@@ -137,8 +139,10 @@
 
   services.syncthing = {
     enable = true;
+    user = "hecka";
+    group = "users";
 
-    openDefaultPorts = true;
+    configDir = "/home/hecka/.config/syncthing";
   };
 
   # Add waybar
@@ -147,7 +151,6 @@
   environment.systemPackages = with pkgs; [
 
     gcc
-
     # for emacs
     ripgrep
     fd
