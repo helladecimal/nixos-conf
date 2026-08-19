@@ -75,6 +75,14 @@
     };
   };
 
+  services.tlp = {
+    enable = true;
+    settings = {
+      START_CHARGE_THRESH_BAT=80
+      STOP_CHARGE_THRESH_BAT0=85
+    };
+  };
+
   programs.niri.enable = true;
 
   # services.picom.enable = true;
