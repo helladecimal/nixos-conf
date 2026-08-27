@@ -60,6 +60,28 @@
   # services.xserver.windowManager.berry.enable = true;
 
   services.desktopManager.plasma6.enable = true;
+  services.power-profiles-daemon.enable = false;
+  services.tlp = {
+    enable = true;
+
+    settings = {
+      CPU_ENERGY_PERF_POLICY_ON_AC="balance_performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT="balance_power";
+
+      PLATFORM_PROFILE_ON_AC="balanced";
+      PLATFORM_PROFILE_ON_BAT="balance_power";
+
+      START_CHARGE_THRESH_BAT0 = 75;
+      STOP_CHARGE_THRESH_BAT0 = 85;
+
+      CPU_MIN_PERF_ON_BAT = 0;
+      CPU_MAX_PERF_ON_BAT = 75;
+
+      CPU_MIN_PERF_ON_AC = 0;
+      CPU_MAX_PERF_ON_AC = 100;
+
+    };
+  };
 
   services.keyd = {
     enable = true;
