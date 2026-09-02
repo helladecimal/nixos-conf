@@ -34,6 +34,8 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  nix.nixPath = [ "/home/hecka/nix" ];
+
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -160,7 +162,8 @@
 
   # emacs
   services.emacs = {
-     enable = true;
+  # disable emacs for now because ts using too much cpu
+     enable = false;
      package = pkgs.emacs-pgtk;
   };
 
@@ -201,6 +204,7 @@
     hyprlock
     waypaper
     busybox
+    neovim
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
 
