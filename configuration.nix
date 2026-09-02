@@ -35,8 +35,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  nix.nixPath = [ "/home/hecka/nix" ];
-
   # Enable networking
   networking.networkmanager.enable = true;
 
