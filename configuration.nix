@@ -13,7 +13,21 @@
   # Bootloader.
   #boot.loader.systemd-boot.enable = true;
   #boot.loader.systemd-boot.editor = false;
-  boot.loader.limine.enable = true;
+  boot.loader.limine = {
+	enable = true;
+	
+	resolution = "1920x1080x32";
+
+	style = {
+		backdrop = "222222";
+		wallpaperStyle = "centered";
+		wallpapers = [ ];
+
+		interface = {
+			resolution = "1920x1080";
+		};
+	};
+  }
 
   boot.kernelParams = [
     "quiet"
