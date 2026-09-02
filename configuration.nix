@@ -160,7 +160,8 @@
 
   # emacs
   services.emacs = {
-     enable = true;
+  # disable emacs for now because ts using too much cpu
+     enable = false;
      package = pkgs.emacs-pgtk;
   };
 
