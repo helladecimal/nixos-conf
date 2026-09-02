@@ -19,15 +19,17 @@
 	resolution = "1920x1080x32";
 
 	style = {
-		backdrop = "222222";
+		backdrop = "555555";
 		wallpaperStyle = "centered";
 		wallpapers = [ ];
 
 		interface = {
 			resolution = "1920x1080";
+			helpColor = "FFFFFF";
+			brandingColor = "FFFFFF";
 		};
 	};
-  }
+  };
 
   boot.kernelParams = [
     "quiet"
