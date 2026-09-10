@@ -11,7 +11,7 @@
 	initExtra = "fastfetch";
 
 	shellAliases = {
-	    wakemain = "heckassh wakemain; echo "main pc on";
+	    wakemain = "heckassh wakemain; echo \"main pc on\"";
 	};
     };
 }
