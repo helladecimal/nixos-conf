@@ -7,8 +7,11 @@
 
     programs.bash = {
         enable = true;
+
+	initExtra = "fastfetch";
+
 	shellAliases = {
-	    wakemain = "heckassh wakemain";
+	    wakemain = "heckassh wakemain; echo "main pc on";
 	};
     };
 }
