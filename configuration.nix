@@ -15,7 +15,7 @@ in
     ];
 
   home-manager.useUserPackages = true;
-  home-manager.useGlobalPackages = true;
+  home-manager.useGlobalPkgs = true;
   home-manager.backupFileExtension = "backup";
   home-manager.users.hecka = import ./home.nix;
 
