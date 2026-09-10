@@ -11,6 +11,12 @@
 	initExtra = "fastfetch";
 
 	shellAliases = {
+	    la = "ls -la";
+	    ".." = "cd ..";
+	    nrs = "sudo nixos-rebuild switch";
+	    vim = "nvim";
+
+	    heckassh = "ssh hecka@heckadecimal";
 	    wakemain = "heckassh wakemain; echo \"main pc on\"";
 	};
     };
