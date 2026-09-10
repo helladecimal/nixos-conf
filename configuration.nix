@@ -5,10 +5,20 @@
 { config, pkgs, ... }:
 
 {
+  let
+    home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz;
+  in
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      (import "${home-manager}/nixos")
     ];
+
+  home-manager.useUserPackages = true;
+  home-manager.useGlobalPackages = true;
+  home-manager.backupFileExtension = "backup";
+  home-manager.users.hecka = import ./home.nix;
 
   # Bootloader.
   #boot.loader.systemd-boot.enable = true;
@@ -190,6 +200,8 @@
     configDir = "/home/hecka/.config/syncthing";
   };
 
+  services.tailscale.enable = true;
+
   # Add waybar
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -203,6 +215,8 @@
 
     nerd-fonts.agave
     brightnessctl
+
+    moonlight-qt
 
     vesktop
     waybar
