@@ -12,6 +12,7 @@
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       # (import "${home-manager}/nixos")
+      inputs.fht-compositor.nixosModules.default
     ];
 
 

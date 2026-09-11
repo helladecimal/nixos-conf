@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+
+    imports = [inputs.fht-compositor.homeModules.default];
+
     home.username = "hecka";
     home.homeDirectory = "/home/hecka";
     home.stateVersion = "26.05";
@@ -20,6 +23,8 @@
 	    wakemain = "heckassh wakemain; echo \"main pc on\"";
 	};
     };
+
+    programs.fht-compositor.enable = true;
 	
     home.packages = with pkgs; [
 	bat
