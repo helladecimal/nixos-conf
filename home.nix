@@ -20,4 +20,8 @@
 	    wakemain = "heckassh wakemain; echo \"main pc on\"";
 	};
     };
+	
+    home.packages = with pkgs; [
+	bat
+    ];
 }
