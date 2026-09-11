@@ -8,13 +8,13 @@
     fht-compositor = {
 	url = "github:nferhat/fht-compositor";
 	inputs.nixpkgs.follows = "nixpkgs";
-
-	inputs.rust-overlay.follows = "";
     };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
 	nixosConfigurations.nixxy = nixpkgs.lib.nixosSystem {
+		system = "x86_64-linux";
+		specialArgs = { inherit inputs; };
 		modules = [ 
 			./configuration.nix 
 			home-manager.nixosModules.home-manager

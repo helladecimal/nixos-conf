@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 #let
  # home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz;
@@ -56,6 +56,8 @@
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.nixPath = [ "/home/hecka/nix-conf/" ];
 
   # Enable networking
   networking.networkmanager.enable = true;

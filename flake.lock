@@ -5,7 +5,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "rust-overlay": []
+        "rust-overlay": "rust-overlay"
       },
       "locked": {
         "lastModified": 1789157399,
@@ -73,6 +73,27 @@
         "fht-compositor": "fht-compositor",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "fht-compositor",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1777778183,
+        "narHash": "sha256-Lqv9MZO0XAGcMbXJU+ULBSMD41Pf391uJehylUQKe7Y=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "dbba5f888c82ef3ce594c451c33ac2474eb80847",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     }
   },
