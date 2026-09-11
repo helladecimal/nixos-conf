@@ -5,7 +5,7 @@
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
     home-manager.url = "github:nix-community/home-manager";
 
-    fht-compositor - {
+    fht-compositor = {
 	url = "github:nferhat/fht-compositor";
 	inputs.nixpkgs.follows = "nixpkgs";
 
