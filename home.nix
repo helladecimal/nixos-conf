@@ -26,7 +26,4 @@
 	};
     };
 
-    programs.fht-compositor.enable = true;
-	
-    
 }
