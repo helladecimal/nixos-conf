@@ -6,7 +6,7 @@
     home-manager.url = "github:nix-community/home-manager";
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
 	nixosConfigurations.nixxy = nixpkgs.lib.nixosSystem {
 		modules = [ 
 			./configuration.nix 
