@@ -126,6 +126,7 @@
   };
 
   programs.niri.enable = true;
+  services.displayManager.defaultSession = "niri";
 
   # services.picom.enable = true;
 
