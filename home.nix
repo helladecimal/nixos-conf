@@ -8,6 +8,8 @@
     home.homeDirectory = "/home/hecka";
     home.stateVersion = "26.05";
 
+    programs.bat.enable = true;
+
     programs.bash = {
         enable = true;
 
@@ -26,7 +28,5 @@
 
     programs.fht-compositor.enable = true;
 	
-    home.packages = with pkgs; [
-	bat
-    ];
+    
 }
