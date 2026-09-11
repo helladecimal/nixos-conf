@@ -3,11 +3,21 @@
 
   inputs = {
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
+    home-manager.url = "github:nix-community/home-manager";
   };
 
   outputs = { self, nixpkgs }: {
 	nixosConfigurations.nixxy = nixpkgs.lib.nixosSystem {
-		modules = [ ./configuration.nix ./home.nix ];
+		modules = [ 
+			./configuration.nix 
+			home-manager.nixosModules.home-manager
+			{
+				home-manager.useUserPackages = true;
+				home-manager.useGlobalPkgs = true;
+			  	home-manager.backupFileExtension = "backup";
+			 	home-manager.users.hecka = import ./home.nix;
+			}
+		];
 	};
   };
 }
