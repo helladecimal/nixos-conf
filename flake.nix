@@ -9,6 +9,8 @@
 	url = "github:nferhat/fht-compositor";
 	inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
@@ -17,6 +19,9 @@
 		specialArgs = { inherit inputs; };
 		modules = [ 
 			./configuration.nix 
+
+      			inputs.fht-compositor.nixosModules.default
+
 			home-manager.nixosModules.home-manager
 			{
 				home-manager.useUserPackages = true;

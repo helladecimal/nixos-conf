@@ -1,8 +1,6 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
-
-    imports = [inputs.fht-compositor.homeModules.default];
 
     home.username = "hecka";
     home.homeDirectory = "/home/hecka";
