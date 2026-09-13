@@ -16,7 +16,8 @@
 	shellAliases = {
 	    la = "ls -la";
 	    ".." = "cd ..";
-	    nrs = "sudo nix flake update; sudo nixos-rebuild switch";
+	    nrs = "sudo nixos-rebuild --impure switch --flake /home/hecka/nix-conf/";
+	    flake-upd = "sudo nix flake update";
 	    vim = "nvim";
 
 	    heckassh = "ssh hecka@heckadecimal";

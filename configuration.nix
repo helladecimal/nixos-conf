@@ -219,6 +219,7 @@
 
     moonlight-qt
     inputs.parsecgaming.packages.x86_64-linux.parsecgaming
+    zenity
 
     vesktop
     waybar
