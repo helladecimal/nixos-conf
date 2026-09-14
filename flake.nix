@@ -10,7 +10,6 @@
 	inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {

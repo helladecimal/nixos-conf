@@ -68,72 +68,11 @@
         "url": "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst"
       }
     },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1749857119,
-        "narHash": "sha256-tG5xUn3hFaPpAHYIvr2F88b+ovcIO5k1HqajFy7ZFPM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "5f4f306bea96741f1588ea4f450b2a2e29f42b98",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-25.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "parsecDeb": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-/vdEJeyo8wibEOpMYaI4RzjGSVcE4mB+8I66pWN2s8U=",
-        "type": "file",
-        "url": "https://builds.parsecgaming.com/package/parsec-linux.deb"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://builds.parsecgaming.com/package/parsec-linux.deb"
-      }
-    },
-    "parsecMeta": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-MaBaAcuriCHa1NEfGsGLQS3cNgA2+CtBaIW850f3Wm8=",
-        "type": "file",
-        "url": "https://builds.parsecgaming.com/channel/release/appdata/linux/latest"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://builds.parsecgaming.com/channel/release/appdata/linux/latest"
-      }
-    },
-    "parsecgaming": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_3",
-        "parsecDeb": "parsecDeb",
-        "parsecMeta": "parsecMeta"
-      },
-      "locked": {
-        "lastModified": 1784834219,
-        "narHash": "sha256-ItZdA+ZelrodqogQAwbPA3ojh8IZisGVafiMXUrW3Go=",
-        "owner": "DarthPJB",
-        "repo": "parsec-gaming-nix",
-        "rev": "cab452ad4cfa864c26b9072e8293d86178c0ee0b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "DarthPJB",
-        "repo": "parsec-gaming-nix",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "fht-compositor": "fht-compositor",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_2",
-        "parsecgaming": "parsecgaming"
+        "nixpkgs": "nixpkgs_2"
       }
     },
     "rust-overlay": {

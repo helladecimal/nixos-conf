@@ -218,8 +218,7 @@
     brightnessctl
 
     moonlight-qt
-    inputs.parsecgaming.packages.x86_64-linux.parsecgaming
-    zenity
+    rustdesk
 
     vesktop
     waybar
