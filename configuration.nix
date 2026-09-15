@@ -132,6 +132,12 @@
   programs.fht-compositor.enable = true;
   services.displayManager.defaultSession = "niri";
 
+  xdg.portal = {
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      configPackages = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
   # services.picom.enable = true;
 
   # Configure keymap in X11
