@@ -209,7 +209,7 @@
   	enable = true;
 
 	packages = [
-		{ appID = "org.vinegarhq.Sober"; origin = "flathub"; }	
+		{ appId = "org.vinegarhq.Sober"; origin = "flathub"; }	
 	];
   };
 
