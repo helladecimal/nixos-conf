@@ -130,7 +130,6 @@
   };
 
   programs.niri.enable = true;
-  programs.fht-compositor.enable = true;
   services.displayManager.defaultSession = "niri";
 
   xdg.portal = {
