@@ -204,6 +204,15 @@
   # Add waybar
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
+  services.flatpak = {
+  	enable = true;
+
+	packages = [
+		{ appID = "org.vinegarhq.Sober"; origin = "flathub"; }	
+	];
+  };
+
   environment.systemPackages = with pkgs; [
 
     gcc
