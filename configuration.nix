@@ -208,6 +208,9 @@
   services.flatpak.enable = true;
 
 
+  services.flatpak.packages = [
+      { appId = "org.vinegarhq.Sober"; origin = "flathub"; }	
+  ];
 
   environment.systemPackages = with pkgs; [
 
