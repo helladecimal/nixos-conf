@@ -4,15 +4,16 @@
   inputs = {
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
     home-manager.url = "github:nix-community/home-manager";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, nix-flatpak, ... }: {
 	nixosConfigurations.nixxy = nixpkgs.lib.nixosSystem {
 		system = "x86_64-linux";
 		specialArgs = { inherit inputs; };
 		modules = [ 
 			./configuration.nix 
-
+			nix-flatpak.nixosModules.nix-flatpak
 			home-manager.nixosModules.home-manager
 			{
 				home-manager.useUserPackages = true;
