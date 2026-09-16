@@ -1,26 +1,5 @@
 {
   "nodes": {
-    "fht-compositor": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-overlay": "rust-overlay"
-      },
-      "locked": {
-        "lastModified": 1789157399,
-        "narHash": "sha256-kx/op4zEz7XxtLv4LyLT5oT4NuWxRPJ0JBgJNw5p/Rs=",
-        "owner": "nferhat",
-        "repo": "fht-compositor",
-        "rev": "8fae51f3e50a6c806f4eb8be2e805866183503d4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nferhat",
-        "repo": "fht-compositor",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -70,30 +49,8 @@
     },
     "root": {
       "inputs": {
-        "fht-compositor": "fht-compositor",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2"
-      }
-    },
-    "rust-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "fht-compositor",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1777778183,
-        "narHash": "sha256-Lqv9MZO0XAGcMbXJU+ULBSMD41Pf391uJehylUQKe7Y=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "dbba5f888c82ef3ce594c451c33ac2474eb80847",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "type": "github"
       }
     }
   },
