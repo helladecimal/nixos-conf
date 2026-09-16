@@ -84,8 +84,6 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  services.acpid.lidEventCommands = "hyprlock";
-
   # Enable Ly display manager
   services.displayManager.ly.enable = true;
 
@@ -130,14 +128,7 @@
   };
 
   programs.niri.enable = true;
-  programs.fht-compositor.enable = true;
   services.displayManager.defaultSession = "niri";
-
-  xdg.portal = {
-      enable = true;
-      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-      configPackages = [ pkgs.xdg-desktop-portal-gtk ];
-  };
 
   # services.picom.enable = true;
 
@@ -224,7 +215,6 @@
     nerd-fonts.agave
     brightnessctl
 
-    moonlight-qt
     rustdesk
 
     vesktop
