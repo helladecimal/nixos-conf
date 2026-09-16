@@ -6,7 +6,7 @@
     home-manager.url = "github:nix-community/home-manager";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nix-flatpak, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
 	nixosConfigurations.nixxy = nixpkgs.lib.nixosSystem {
 		system = "x86_64-linux";
 		specialArgs = { inherit inputs; };

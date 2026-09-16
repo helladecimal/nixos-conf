@@ -216,6 +216,13 @@
 
   services.flatpak.enable = true;
 
+<<<<<<< HEAD
+=======
+	packages = [
+		{ appID = "org.vinegarhq.Sober"; origin = "flathub"; }	
+	];
+  };
+>>>>>>> parent of 72e06c4 (fix errors)
 
   environment.systemPackages = with pkgs; [
 
