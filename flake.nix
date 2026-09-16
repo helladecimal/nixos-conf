@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
     home-manager.url = "github:nix-community/home-manager";
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, nix-flatpak, ... }: {
@@ -13,8 +12,6 @@
 		specialArgs = { inherit inputs; };
 		modules = [ 
 			./configuration.nix 
-
-			nix-flatpak.nixosModules.nix-flatpak
 
 			home-manager.nixosModules.home-manager
 			{
