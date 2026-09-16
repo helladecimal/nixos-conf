@@ -4,12 +4,6 @@
   inputs = {
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
     home-manager.url = "github:nix-community/home-manager";
-
-    fht-compositor = {
-	url = "github:nferhat/fht-compositor";
-	inputs.nixpkgs.follows = "nixpkgs";
-    };
-
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
@@ -18,8 +12,6 @@
 		specialArgs = { inherit inputs; };
 		modules = [ 
 			./configuration.nix 
-
-      			inputs.fht-compositor.nixosModules.default
 
 			home-manager.nixosModules.home-manager
 			{
