@@ -214,6 +214,10 @@
   # $ nix search wget
 
   services.flatpak.enable = true;
+  
+  services.flatpak.packages = [
+	"org.vinegarhq.Sober"
+  ];
 
   environment.systemPackages = with pkgs; [
 
