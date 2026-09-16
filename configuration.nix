@@ -205,13 +205,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
-  services.flatpak = {
-  	enable = true;
+  services.flatpak.enable = true;
 
-	packages = [
-		{ appId = "org.vinegarhq.Sober"; origin = "flathub"; }	
-	];
-  };
+
 
   environment.systemPackages = with pkgs; [
 
